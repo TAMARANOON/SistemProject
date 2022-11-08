@@ -12,3 +12,12 @@ C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.UserControl1.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Form3.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Form4.resources
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\EntityFramework.dll
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\System.Data.SQLite.dll
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\EntityFramework.xml
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\System.Data.SQLite.xml
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.CopyComplete
