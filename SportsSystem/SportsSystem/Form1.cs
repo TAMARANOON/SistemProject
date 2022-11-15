@@ -13,46 +13,43 @@ namespace SportsSystem
 {
     public partial class Form1 : Form
     {
-        string clientDB = @"C:\client.db";
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        // 会員管理
+        private void button1_Click(object sender, EventArgs e) 
         {
             Form2 form2 = new Form2();
-            this.Hide();
             form2.Show();
-
+            this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // 終了
+        private void button2_Click(object sender, EventArgs e) 
         {
-            Application.Exit();
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        // 会員登録
+        private void button3_Click(object sender, EventArgs e) 
         {
             Form3 form3 = new Form3();
-            this.Hide();
             form3.Show();
+            this.Hide();
 
-                using (var con = new SQLiteConnection("Data Source=client.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
+            {
+                con.Open();
+                using (SQLiteCommand cmd = con.CreateCommand())
                 {
-                    con.Open();
-                //データベースが存在していたら作成しない 未完
-                if (System.IO.File.Exists(clientDB)) 
-                {
-                    using (SQLiteCommand command = con.CreateCommand())
-                    {
-                        command.CommandText =
-                            "create table m_client(client_id INTEGER  PRIMARY KEY AUTOINCREMENT, client_name TEXT, address INTEGER, phone_number INTEGER)";//autoincrement = 自動採番
-                        command.ExecuteNonQuery();
-                    }
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS [m_client](" +
+                                      "create table m_client(client_id INTEGER  PRIMARY KEY AUTOINCREMENT, client_name TEXT, address INTEGER, phone_number INTEGER)" +
+                                      ");";
                 }
-                    con.Close();
-                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

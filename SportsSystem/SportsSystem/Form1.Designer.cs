@@ -50,7 +50,7 @@ namespace SportsSystem
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(17, 388);
+            this.button2.Location = new System.Drawing.Point(15, 388);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 50);
             this.button2.TabIndex = 1;
@@ -107,7 +107,9 @@ namespace SportsSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace SportsSystem
 {
@@ -27,11 +28,25 @@ namespace SportsSystem
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // 登録
+        private void button2_Click(object sender, EventArgs e) 
         {
+            string name = textBox1.Text;
+            string address = textBox2.Text;
+            string phone_number = textBox3.Text;
+
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
+            {
+                con.Open();
+                using (SQLiteCommand cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "";
+                }
+            }
+
             Form4 form4 = new Form4();
-            this.Hide();
             form4.Show();
+            this.Hide();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -69,11 +84,12 @@ namespace SportsSystem
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        // 戻る
+        private void button1_Click(object sender, EventArgs e) 
         {
             Form1 form1 = new Form1();
-            this.Close();
             form1.Show();
+            this.Close();
         }
     }
 }

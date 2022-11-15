@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace SportsSystem
 {
@@ -17,11 +18,12 @@ namespace SportsSystem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        // 戻る
+        private void button1_Click(object sender, EventArgs e) 
         {
             Form1 form1 = new Form1();
-            this.Close();
             form1.Show();
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace SportsSystem
 {
-    public partial class Form4 : Form
+    public partial class Form5 : Form
     {
-        public Form4()
+        public Form5()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            this.Close();
-            form3.Show();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
