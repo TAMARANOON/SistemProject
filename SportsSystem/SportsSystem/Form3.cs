@@ -31,6 +31,7 @@ namespace SportsSystem
         // 登録
         private void button2_Click(object sender, EventArgs e) 
         {
+            int number = 00000000;
             string name = textBox1.Text;
             string address = textBox2.Text;
             string phone_number = textBox3.Text;
@@ -38,12 +39,26 @@ namespace SportsSystem
             using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
             {
                 con.Open();
-                using (SQLiteCommand cmd = con.CreateCommand())
+                using (SQLiteTransaction trans = con.BeginTransaction())
                 {
-                    cmd.CommandText = "";
+                    SQLiteCommand cmd = con.CreateCommand();
+
+                    cmd.CommandText = "INSERT INTO m_client (client_id, client_name, address, phone_number) VALUES (@Id, @Name, @Address, @Phone)";
+
+                    cmd.Parameters.Add("Id", System.Data.DbType.Int64);
+                    cmd.Parameters.Add("Name", System.Data.DbType.String);
+                    cmd.Parameters.Add("Address", System.Data.DbType.String);
+                    cmd.Parameters.Add("Phone", System.Data.DbType.Int64);
+
+                    cmd.Parameters["Id"].Value = number;
+                    cmd.Parameters["Name"].Value = name;
+                    cmd.Parameters["Address"].Value = address;
+                    cmd.Parameters["Phone"].Value = phone_number;
+                    cmd.ExecuteNonQuery();
+
+                    trans.Commit();
                 }
             }
-
             Form4 form4 = new Form4();
             form4.Show();
             this.Hide();
