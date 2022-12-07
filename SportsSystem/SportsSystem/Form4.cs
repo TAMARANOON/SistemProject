@@ -13,31 +13,26 @@ namespace SportsSystem
 {
     public partial class Form4 : Form
     {
-        private string name;
-        private void Form4_Shown()
-        {
-            //label7.Text =;
-        }
+        Form3 form3 = new Form3();
+        Form6 form6 = new Form6();
+
         public Form4()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Close();
-
-        }
-
         // 登録
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
-            Form3 form3 = new Form3();
             form3.Close();
             form6.Show();
+            this.Close();
+        }
+        //戻る
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            form3.Show();
             this.Close();
         }
     }

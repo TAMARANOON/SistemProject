@@ -50,6 +50,7 @@ namespace SportsSystem
             this.button2.TabIndex = 22;
             this.button2.Text = "登録";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -59,6 +60,7 @@ namespace SportsSystem
             this.button1.TabIndex = 23;
             this.button1.Text = "戻る";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 
