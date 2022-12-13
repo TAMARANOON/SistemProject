@@ -13,80 +13,26 @@ namespace SportsSystem
 {
     public partial class Form3 : Form
     {
-        string name;
-        string address;
-        string phone_number;
-        public string nameInfo
-        {
-            get { return textBox1.Text; }
-            set { textBox1.Text = name; }
-        }
-
         public Form3()
         {
             InitializeComponent();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // 登録
         private void button2_Click(object sender, EventArgs e) 
         {
-            string name = textBox1.Text;
-            string address = textBox2.Text;
-            string phone_number = textBox3.Text;
+            Form4 form4 = new Form4(this);
 
-            Form4 form4 = new Form4();
-            form4.Show();
-        }
+            form4.label7.Text = textBox1.Text;
+            form4.label8.Text = textBox2.Text;
+            form4.label9.Text = textBox3.Text;
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            form4.ShowDialog();
         }
 
         // 戻る
         private void button1_Click(object sender, EventArgs e) 
         {
-            Form1 form1 = new Form1();
+            Portal form1 = new Portal();
             form1.Show();
             this.Close();
         }

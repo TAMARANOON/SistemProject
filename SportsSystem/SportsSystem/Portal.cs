@@ -11,9 +11,9 @@ using System.Data.SQLite;
 
 namespace SportsSystem
 {
-    public partial class Form1 : Form
+    public partial class Portal : Form
     {
-        public Form1()
+        public Portal()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace SportsSystem
         // 会員管理
         private void button1_Click(object sender, EventArgs e) 
         {
-            Form2 form2 = new Form2();
+            Search form2 = new Search();
             form2.Show();
             this.Hide();
         }
@@ -29,7 +29,7 @@ namespace SportsSystem
         // 終了
         private void button2_Click(object sender, EventArgs e) 
         {
-            Form5 form5 = new Form5();
+            Shatdown form5 = new Shatdown();
             form5.ShowDialog();
         }
 
@@ -45,16 +45,18 @@ namespace SportsSystem
                 con.Open();
                 using (SQLiteCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS [m_client](" +
-                                      "create table m_client(client_id INTEGER  PRIMARY KEY AUTOINCREMENT, client_name TEXT, address INTEGER, phone_number INTEGER)" +
-                                      ");";
+                    cmd.CommandText = "create table if not exists m_client(client_id INTEGER PRIMARY KEY AUTOINCREMENT, client_name TEXT, address TEXT, phone_number TEXT)";
+                    cmd.ExecuteNonQuery();
                 }
+                con.Close();
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        //管理者用メニュー（消去予定）
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            Admin admin = new Admin();
+            admin.Show();
+            this.Hide();
         }
     }
 }

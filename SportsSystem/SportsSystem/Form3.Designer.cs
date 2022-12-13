@@ -60,7 +60,6 @@ namespace SportsSystem
             this.label6.Size = new System.Drawing.Size(155, 15);
             this.label6.TabIndex = 20;
             this.label6.Text = "新規に会員を登録します";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -71,7 +70,6 @@ namespace SportsSystem
             this.label5.Size = new System.Drawing.Size(108, 44);
             this.label5.TabIndex = 19;
             this.label5.Text = "登録";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox3
             // 
@@ -83,7 +81,6 @@ namespace SportsSystem
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(622, 31);
             this.textBox3.TabIndex = 18;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -94,7 +91,6 @@ namespace SportsSystem
             this.label4.Size = new System.Drawing.Size(73, 30);
             this.label4.TabIndex = 17;
             this.label4.Text = "住所";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox2
             // 
@@ -106,7 +102,6 @@ namespace SportsSystem
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(274, 31);
             this.textBox2.TabIndex = 16;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -117,7 +112,6 @@ namespace SportsSystem
             this.label3.Size = new System.Drawing.Size(133, 30);
             this.label3.TabIndex = 15;
             this.label3.Text = "電話番号";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -127,7 +121,6 @@ namespace SportsSystem
             this.label2.Size = new System.Drawing.Size(113, 15);
             this.label2.TabIndex = 14;
             this.label2.Text = "HCSスポーツクラブ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -138,7 +131,6 @@ namespace SportsSystem
             this.label1.Size = new System.Drawing.Size(73, 30);
             this.label1.TabIndex = 13;
             this.label1.Text = "氏名";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -150,7 +142,6 @@ namespace SportsSystem
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(274, 31);
             this.textBox1.TabIndex = 12;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -192,13 +183,13 @@ namespace SportsSystem
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SportsSystem
 {
-    public partial class Form5 : Form
+    public partial class Shatdown : Form
     {
-        public Form5()
+        public Shatdown()
         {
             InitializeComponent();
         }

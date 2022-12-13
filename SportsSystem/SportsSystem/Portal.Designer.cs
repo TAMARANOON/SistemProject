@@ -1,7 +1,7 @@
 ﻿
 namespace SportsSystem
 {
-    partial class Form1
+    partial class Portal
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -35,6 +35,7 @@ namespace SportsSystem
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -96,11 +97,22 @@ namespace SportsSystem
             this.label3.TabIndex = 5;
             this.label3.Text = "新規会員登録";
             // 
-            // Form1
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(625, 409);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(151, 29);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "管理者用メニュー";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // Portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
@@ -108,10 +120,9 @@ namespace SportsSystem
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Portal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +136,7 @@ namespace SportsSystem
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
