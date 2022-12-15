@@ -123,7 +123,7 @@ namespace SportsSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox3.Location = new System.Drawing.Point(505, 112);
+            this.textBox3.Location = new System.Drawing.Point(505, 108);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(460, 31);
             this.textBox3.TabIndex = 7;
@@ -149,7 +149,7 @@ namespace SportsSystem
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(411, 211);
+            this.button2.Location = new System.Drawing.Point(434, 211);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 46);
             this.button2.TabIndex = 10;
@@ -188,7 +188,7 @@ namespace SportsSystem
             this.dataGridView1.Size = new System.Drawing.Size(800, 248);
             this.dataGridView1.TabIndex = 13;
             // 
-            // Form2
+            // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,7 +208,7 @@ namespace SportsSystem
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

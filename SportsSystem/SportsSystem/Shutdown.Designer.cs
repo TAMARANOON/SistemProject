@@ -1,7 +1,7 @@
 ﻿
 namespace SportsSystem
 {
-    partial class Shatdown
+    partial class Shutdown
     {
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,6 @@ namespace SportsSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(546, 20);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form5
             // 

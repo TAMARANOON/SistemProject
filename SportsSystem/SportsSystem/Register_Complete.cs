@@ -10,26 +10,18 @@ using System.Windows.Forms;
 
 namespace SportsSystem
 {
-    public partial class Shatdown : Form
+    public partial class Register_Complete : Form
     {
-        public Shatdown()
+        public Register_Complete()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
+            Portal portal = new Portal();
+            portal.Show();
             this.Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

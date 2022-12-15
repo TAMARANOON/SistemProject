@@ -21,23 +21,23 @@ namespace SportsSystem
         // 会員管理
         private void button1_Click(object sender, EventArgs e) 
         {
-            Search form2 = new Search();
-            form2.Show();
+            Search search = new Search();
+            search.Show();
             this.Hide();
         }
 
         // 終了
         private void button2_Click(object sender, EventArgs e) 
         {
-            Shatdown form5 = new Shatdown();
-            form5.ShowDialog();
+            Shutdown shutdown = new Shutdown();
+            shutdown.ShowDialog();
         }
 
         // 会員登録
-        private void button3_Click(object sender, EventArgs e) 
+        private void registerButton_Click(object sender, EventArgs e) 
         {
-            Form3 form3 = new Form3();
-            form3.Show();
+            Register register = new Register();
+            register.Show();
             this.Hide();
 
             using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))

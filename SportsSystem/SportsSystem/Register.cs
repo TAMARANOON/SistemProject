@@ -11,29 +11,29 @@ using System.Data.SQLite;
 
 namespace SportsSystem
 {
-    public partial class Form3 : Form
+    public partial class Register : Form
     {
-        public Form3()
+        public Register()
         {
             InitializeComponent();
         }
         // 登録
         private void button2_Click(object sender, EventArgs e) 
         {
-            Form4 form4 = new Form4(this);
+            Register_Check r_Check = new Register_Check(this);
 
-            form4.label7.Text = textBox1.Text;
-            form4.label8.Text = textBox2.Text;
-            form4.label9.Text = textBox3.Text;
+            r_Check.label7.Text = textBox1.Text;
+            r_Check.label8.Text = textBox2.Text;
+            r_Check.label9.Text = textBox3.Text;
 
-            form4.ShowDialog();
+            r_Check.ShowDialog();
         }
 
         // 戻る
         private void button1_Click(object sender, EventArgs e) 
         {
-            Portal form1 = new Portal();
-            form1.Show();
+            Portal portal = new Portal();
+            portal.Show();
             this.Close();
         }
     }

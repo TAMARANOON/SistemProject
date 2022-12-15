@@ -10,17 +10,20 @@ using System.Windows.Forms;
 
 namespace SportsSystem
 {
-    public partial class Form6 : Form
+    public partial class Shutdown : Form
     {
-        public Form6()
+        public Shutdown()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            Portal form1 = new Portal();
-            form1.Show();
             this.Close();
         }
     }

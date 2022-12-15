@@ -32,7 +32,7 @@ namespace SportsSystem
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.registerButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -68,16 +68,16 @@ namespace SportsSystem
             this.label1.TabIndex = 2;
             this.label1.Text = "HCSスポーツクラブ";
             // 
-            // button3
+            // registerButton
             // 
-            this.button3.Font = new System.Drawing.Font("MS UI Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(168, 253);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(447, 106);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "会員登録";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.registerButton.Font = new System.Drawing.Font("MS UI Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerButton.Location = new System.Drawing.Point(168, 253);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(447, 106);
+            this.registerButton.TabIndex = 3;
+            this.registerButton.Text = "会員登録";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // label2
             // 
@@ -115,7 +115,7 @@ namespace SportsSystem
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -133,7 +133,7 @@ namespace SportsSystem
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;

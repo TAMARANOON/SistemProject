@@ -1,7 +1,7 @@
 ﻿
 namespace SportsSystem
 {
-    partial class Form4
+    partial class Register_Check
     {
         /// <summary>
         /// Required designer variable.

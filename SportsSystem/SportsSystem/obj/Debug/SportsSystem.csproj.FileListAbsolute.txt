@@ -8,8 +8,6 @@ C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.exe
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.pdb
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.UserControl1.resources
-C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Form3.resources
-C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Form4.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\EntityFramework.dll
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\System.Data.SQLite.dll
@@ -19,7 +17,6 @@ C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\System.Data.SQLite.xml
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.CopyComplete
-C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Form6.resources
 C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\bin\Debug\SportsSystem.exe.config
 C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\bin\Debug\SportsSystem.exe
 C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\bin\Debug\SportsSystem.pdb
@@ -44,8 +41,11 @@ C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.C
 C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.CopyComplete
 C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\obj\Debug\SportsSystem.exe
 C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\obj\Debug\SportsSystem.pdb
-C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Shatdown.resources
 C:\Users\tyuki\Desktop\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Shatdown.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Portal.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Search.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Admin.resources
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Register.resources
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Register_Check.resources
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Register_Complete.resources
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Shutdown.resources

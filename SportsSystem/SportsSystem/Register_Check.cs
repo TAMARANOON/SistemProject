@@ -11,14 +11,14 @@ using System.Data.SQLite;
 
 namespace SportsSystem
 {
-    public partial class Form4 : Form
+    public partial class Register_Check : Form
     {
-        Form3 form3;
+        Register register;
 
-        public Form4(Form3 form3)
+        public Register_Check(Register form3)
         {
             InitializeComponent();
-            this.form3 = form3;
+            this.register = form3;
         }
 
         // 登録
@@ -44,15 +44,15 @@ namespace SportsSystem
                     cmd.CommandText = "select * from m_client where rowid = last_insert_rowid()";
                 }
             }
-            Form6 form6 = new Form6();
-            form3.Close();
+            Register_Complete form6 = new Register_Complete();
+            register.Close();
             form6.Show();
             this.Close();
         }
         //戻る
         private void button1_Click_1(object sender, EventArgs e)
         {
-            form3.Show();
+            register.Show();
             this.Close();
         }
     }
