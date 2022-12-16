@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
@@ -45,6 +38,7 @@ namespace SportsSystem
                 con.Open();
                 using (SQLiteCommand cmd = con.CreateCommand())
                 {
+                    //登録画面表示時にm_clientを作成
                     cmd.CommandText = "create table if not exists m_client(client_id INTEGER PRIMARY KEY AUTOINCREMENT, client_name TEXT, address TEXT, phone_number TEXT)";
                     cmd.ExecuteNonQuery();
                 }

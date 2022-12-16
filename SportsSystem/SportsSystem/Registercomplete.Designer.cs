@@ -1,7 +1,7 @@
 ﻿
 namespace SportsSystem
 {
-    partial class Register_Complete
+    partial class Registercomplete
     {
         /// <summary>
         /// Required designer variable.

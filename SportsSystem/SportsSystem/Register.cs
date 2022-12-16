@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
 
 namespace SportsSystem
 {
@@ -17,20 +9,22 @@ namespace SportsSystem
         {
             InitializeComponent();
         }
+
         // 登録
-        private void button2_Click(object sender, EventArgs e) 
+        private void registerButton_Click(object sender, EventArgs e) 
         {
-            Register_Check r_Check = new Register_Check(this);
+            Registercheck registerCheck = new Registercheck(this);
 
-            r_Check.label7.Text = textBox1.Text;
-            r_Check.label8.Text = textBox2.Text;
-            r_Check.label9.Text = textBox3.Text;
+            //氏名、電話番号、住所を遷移先に渡す
+            registerCheck.nameLabel.Text = nameBox.Text;
+            registerCheck.phoneLabel.Text = phoneLabel.Text;
+            registerCheck.addressLabel.Text = addressLabel.Text;
 
-            r_Check.ShowDialog();
+            registerCheck.ShowDialog();
         }
 
-        // 戻る
-        private void button1_Click(object sender, EventArgs e) 
+        // メインメニューに戻る
+        private void returnButton_Click(object sender, EventArgs e) 
         {
             Portal portal = new Portal();
             portal.Show();
