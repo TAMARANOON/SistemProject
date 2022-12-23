@@ -4,6 +4,7 @@ using System.Data.SQLite;
 
 namespace SportsSystem
 {
+    //メインメニュー　会員の管理、登録画面に遷移できる
     public partial class Portal : Form
     {
         public Portal()

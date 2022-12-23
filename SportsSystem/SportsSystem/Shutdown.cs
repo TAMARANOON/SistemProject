@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace SportsSystem
 {
+    //システムを終了する
     public partial class Shutdown : Form
     {
         public Shutdown()

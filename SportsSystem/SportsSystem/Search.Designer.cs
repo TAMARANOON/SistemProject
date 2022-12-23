@@ -41,8 +41,8 @@ namespace SportsSystem
             this.nameRadio = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +128,7 @@ namespace SportsSystem
             this.idRadio.TabStop = true;
             this.idRadio.Text = "会員番号";
             this.idRadio.UseVisualStyleBackColor = true;
+            this.idRadio.CheckedChanged += new System.EventHandler(this.idRadio_CheckedChanged);
             // 
             // phoneRadio
             // 
@@ -140,6 +141,7 @@ namespace SportsSystem
             this.phoneRadio.TabStop = true;
             this.phoneRadio.Text = "電話番号";
             this.phoneRadio.UseVisualStyleBackColor = true;
+            this.phoneRadio.CheckedChanged += new System.EventHandler(this.phoneRadio_CheckedChanged);
             // 
             // nameRadio
             // 
@@ -152,6 +154,7 @@ namespace SportsSystem
             this.nameRadio.TabStop = true;
             this.nameRadio.Text = "氏名";
             this.nameRadio.UseVisualStyleBackColor = true;
+            this.nameRadio.CheckedChanged += new System.EventHandler(this.nameRadio_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -178,6 +181,18 @@ namespace SportsSystem
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "検索方式";
             // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.radioButton2.Location = new System.Drawing.Point(24, 95);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(141, 31);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "部分一致";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -190,18 +205,6 @@ namespace SportsSystem
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "完全一致";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.radioButton2.Location = new System.Drawing.Point(24, 95);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(141, 31);
-            this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "部分一致";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // Search
             // 

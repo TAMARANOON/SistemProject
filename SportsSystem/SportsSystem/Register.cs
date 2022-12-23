@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace SportsSystem
 {
+    //登録する情報を入力
     public partial class Register : Form
     {
         public Register()
@@ -13,12 +14,12 @@ namespace SportsSystem
         // 登録
         private void registerButton_Click(object sender, EventArgs e) 
         {
-            Registercheck registerCheck = new Registercheck(this);
+            RegisterCheck registerCheck = new RegisterCheck(this);
 
             //氏名、電話番号、住所を遷移先に渡す
             registerCheck.nameLabel.Text = nameBox.Text;
-            registerCheck.phoneLabel.Text = phoneLabel.Text;
-            registerCheck.addressLabel.Text = addressLabel.Text;
+            registerCheck.phoneLabel.Text = phoneBox.Text;
+            registerCheck.addressLabel.Text = addressBox.Text;
 
             registerCheck.ShowDialog();
         }

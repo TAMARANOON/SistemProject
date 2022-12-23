@@ -89,11 +89,11 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registercheck.cs">
+    <Compile Include="RegisterCheck.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registercheck.Designer.cs">
-      <DependentUpon>Registercheck.cs</DependentUpon>
+    <Compile Include="RegisterCheck.Designer.cs">
+      <DependentUpon>RegisterCheck.cs</DependentUpon>
     </Compile>
     <Compile Include="Shutdown.cs">
       <SubType>Form</SubType>
@@ -101,11 +101,11 @@
     <Compile Include="Shutdown.Designer.cs">
       <DependentUpon>Shutdown.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registercomplete.cs">
+    <Compile Include="RegisterComplete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registercomplete.Designer.cs">
-      <DependentUpon>Registercomplete.cs</DependentUpon>
+    <Compile Include="RegisterComplete.Designer.cs">
+      <DependentUpon>RegisterComplete.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,14 +127,14 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registercheck.resx">
-      <DependentUpon>Registercheck.cs</DependentUpon>
+    <EmbeddedResource Include="RegisterCheck.resx">
+      <DependentUpon>RegisterCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.resx">
       <DependentUpon>Shutdown.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registercomplete.resx">
-      <DependentUpon>Registercomplete.cs</DependentUpon>
+    <EmbeddedResource Include="RegisterComplete.resx">
+      <DependentUpon>RegisterComplete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

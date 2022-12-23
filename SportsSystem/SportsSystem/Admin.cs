@@ -5,6 +5,7 @@ using System.Data.SQLite;
 
 namespace SportsSystem
 {
+    //管理者用　テーブルの削除、今登録されている情報の確認
     public partial class Admin : Form
     {
         public Admin()

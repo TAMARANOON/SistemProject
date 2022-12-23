@@ -3,9 +3,10 @@ using System.Windows.Forms;
 
 namespace SportsSystem
 {
-    public partial class Registercomplete : Form
+    //登録した会員情報の番号を確認できる
+    public partial class RegisterComplete : Form
     {
-        public Registercomplete()
+        public RegisterComplete()
         {
             InitializeComponent();
         }

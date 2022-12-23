@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
 namespace SportsSystem
 {
-    public partial class Registercheck : Form
+    //入力した会員情報を確認する画面
+    public partial class RegisterCheck : Form
     {
         Register register;
-        public Registercheck(Register register)
+        public RegisterCheck(Register register)
         {
             InitializeComponent();
             this.register = register;
@@ -22,9 +24,9 @@ namespace SportsSystem
                     //インサート
                     cmd.CommandText = "INSERT INTO m_client (client_name, address, phone_number) VALUES (@Name, @Address, @Phone)";
                     //パラメータセット
-                    cmd.Parameters.Add("Name", System.Data.DbType.String);
-                    cmd.Parameters.Add("Address", System.Data.DbType.String);
-                    cmd.Parameters.Add("Phone", System.Data.DbType.String);
+                    cmd.Parameters.Add("Name", DbType.String);
+                    cmd.Parameters.Add("Address", DbType.String);
+                    cmd.Parameters.Add("Phone", DbType.String);
                     //データ追加
                     cmd.Parameters["Name"].Value = nameLabel.Text;
                     cmd.Parameters["Address"].Value = addressLabel.Text;
@@ -34,7 +36,8 @@ namespace SportsSystem
                     trans.Commit();
                 }
             }
-            Registercomplete registerComplete = new Registercomplete();
+            //登録完了画面に遷移
+            RegisterComplete registerComplete = new RegisterComplete();
             register.Close();
             registerComplete.Show();
             this.Close();

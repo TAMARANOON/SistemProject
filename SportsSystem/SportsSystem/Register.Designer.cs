@@ -32,9 +32,9 @@ namespace SportsSystem
             this.registerButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.addressLabel = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.phoneLabel = new System.Windows.Forms.TextBox();
+            this.phoneBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,16 +71,16 @@ namespace SportsSystem
             this.label5.TabIndex = 19;
             this.label5.Text = "登録";
             // 
-            // addressLabel
+            // addressBox
             // 
-            this.addressLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.addressBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addressLabel.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.addressLabel.Location = new System.Drawing.Point(162, 296);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(622, 31);
-            this.addressLabel.TabIndex = 18;
+            this.addressBox.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.addressBox.Location = new System.Drawing.Point(162, 296);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(622, 31);
+            this.addressBox.TabIndex = 18;
             // 
             // label4
             // 
@@ -92,16 +92,16 @@ namespace SportsSystem
             this.label4.TabIndex = 17;
             this.label4.Text = "住所";
             // 
-            // phoneLabel
+            // phoneBox
             // 
-            this.phoneLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.phoneBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.phoneLabel.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.phoneLabel.Location = new System.Drawing.Point(162, 208);
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(274, 31);
-            this.phoneLabel.TabIndex = 16;
+            this.phoneBox.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.phoneBox.Location = new System.Drawing.Point(162, 208);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(274, 31);
+            this.phoneBox.TabIndex = 16;
             // 
             // label3
             // 
@@ -161,9 +161,9 @@ namespace SportsSystem
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.addressBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.phoneLabel);
+            this.Controls.Add(this.phoneBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -188,8 +188,8 @@ namespace SportsSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button returnButton;
-        public System.Windows.Forms.TextBox addressLabel;
-        public System.Windows.Forms.TextBox phoneLabel;
+        public System.Windows.Forms.TextBox addressBox;
+        public System.Windows.Forms.TextBox phoneBox;
         public System.Windows.Forms.TextBox nameBox;
     }
 }
