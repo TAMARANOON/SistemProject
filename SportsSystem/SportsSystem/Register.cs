@@ -10,7 +10,7 @@ namespace SportsSystem
         {
             InitializeComponent();
         }
-
+        
         // 登録
         private void registerButton_Click(object sender, EventArgs e) 
         {

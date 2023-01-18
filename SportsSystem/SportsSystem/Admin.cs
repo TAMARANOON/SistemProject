@@ -34,7 +34,7 @@ namespace SportsSystem
                 con.Close();
             }
         }
-
+        //データ表示
         private void button3_Click(object sender, EventArgs e)
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))

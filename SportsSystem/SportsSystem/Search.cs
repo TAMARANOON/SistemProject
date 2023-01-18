@@ -1,15 +1,53 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace SportsSystem
 {
     //会員を会員番号、氏名、電話番号で検索
     public partial class Search : Form
     {
+        string SearchFormat;
+        string SearchType;
         public Search()
         {
             InitializeComponent();
+        }
+        private void idRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (idRadio.Checked)
+            {
+                searchLabel.Text = "会員番号";
+                SearchFormat = "client_id";
+            }
+        }
+
+        private void nameRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (nameRadio.Checked)
+            {
+                searchLabel.Text = "氏名";
+                SearchFormat = "client_name";
+            }
+        }
+
+        private void phoneRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (phoneRadio.Checked)
+            {
+                searchLabel.Text = "電話番号";
+                SearchFormat = "phone_number";
+            }
+        }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchType = "";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchType = "";
         }
 
         // 戻る
@@ -23,31 +61,20 @@ namespace SportsSystem
         // 検索
         private void button2_Click(object sender, EventArgs e)
         {
+            string SearchWord;
+            SearchWord = SearchBox.Text;
 
-        }
-
-        private void idRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (idRadio.Checked)
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
             {
-                searchLabel.Text = "会員番号";
+                con.Open();
+                var dataTable = new DataTable();
+
+                var adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + "= " + SearchType + "'"+ SearchWord.ToString() +"'", con);
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+                con.Close();
             }
         }
 
-        private void nameRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (nameRadio.Checked)
-            {
-                searchLabel.Text = "氏名";
-            }
-        }
-
-        private void phoneRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (phoneRadio.Checked)
-            {
-                searchLabel.Text = "電話番号";
-            }
-        }
     }
 }

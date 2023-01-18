@@ -50,7 +50,7 @@ namespace SportsSystem
             this.registerButton.TabIndex = 22;
             this.registerButton.Text = "登録";
             this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            this.registerButton.Click += new System.EventHandler(this.registerButtonClick);
             // 
             // returnButton
             // 

@@ -16,13 +16,14 @@ namespace SportsSystem
         }
 
         // 登録
-        private void registerButton_Click(object sender, EventArgs e){ 
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db")){
-                con.Open();
-                using (SQLiteTransaction trans = con.BeginTransaction()){
-                    SQLiteCommand cmd = con.CreateCommand();
+        private void registerButtonClick(object sender, EventArgs e){ 
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db")){
+                connection.Open();
+                using (SQLiteTransaction trans = connection.BeginTransaction()){
+                    SQLiteCommand cmd = connection.CreateCommand();
                     //インサート
                     cmd.CommandText = "INSERT INTO m_client (client_name, address, phone_number) VALUES (@Name, @Address, @Phone)";
+                    //cmd.CommandText = "SELECT @@IDENTITY";
                     //パラメータセット
                     cmd.Parameters.Add("Name", DbType.String);
                     cmd.Parameters.Add("Address", DbType.String);
@@ -34,6 +35,7 @@ namespace SportsSystem
                     cmd.ExecuteNonQuery();
                     //コミット
                     trans.Commit();
+                    connection.Close();
                 }
             }
             //登録完了画面に遷移

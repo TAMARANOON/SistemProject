@@ -30,7 +30,7 @@ namespace SportsSystem
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,13 +43,15 @@ namespace SportsSystem
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 392);
+            this.button1.Location = new System.Drawing.Point(12, 542);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 46);
             this.button1.TabIndex = 0;
@@ -57,22 +59,22 @@ namespace SportsSystem
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // SearchBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(231, 316);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(514, 31);
-            this.textBox1.TabIndex = 1;
+            this.SearchBox.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SearchBox.Location = new System.Drawing.Point(172, 170);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(477, 31);
+            this.SearchBox.TabIndex = 1;
             // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.searchLabel.Location = new System.Drawing.Point(59, 317);
+            this.searchLabel.Location = new System.Drawing.Point(12, 171);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(133, 30);
             this.searchLabel.TabIndex = 2;
@@ -108,7 +110,7 @@ namespace SportsSystem
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(672, 392);
+            this.button2.Location = new System.Drawing.Point(672, 164);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 46);
             this.button2.TabIndex = 10;
@@ -121,7 +123,7 @@ namespace SportsSystem
             this.idRadio.AutoSize = true;
             this.idRadio.Checked = true;
             this.idRadio.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.idRadio.Location = new System.Drawing.Point(23, 26);
+            this.idRadio.Location = new System.Drawing.Point(16, 26);
             this.idRadio.Name = "idRadio";
             this.idRadio.Size = new System.Drawing.Size(141, 31);
             this.idRadio.TabIndex = 11;
@@ -134,7 +136,7 @@ namespace SportsSystem
             // 
             this.phoneRadio.AutoSize = true;
             this.phoneRadio.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.phoneRadio.Location = new System.Drawing.Point(23, 100);
+            this.phoneRadio.Location = new System.Drawing.Point(295, 26);
             this.phoneRadio.Name = "phoneRadio";
             this.phoneRadio.Size = new System.Drawing.Size(141, 31);
             this.phoneRadio.TabIndex = 12;
@@ -147,7 +149,7 @@ namespace SportsSystem
             // 
             this.nameRadio.AutoSize = true;
             this.nameRadio.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.nameRadio.Location = new System.Drawing.Point(23, 63);
+            this.nameRadio.Location = new System.Drawing.Point(182, 26);
             this.nameRadio.Name = "nameRadio";
             this.nameRadio.Size = new System.Drawing.Size(87, 31);
             this.nameRadio.TabIndex = 13;
@@ -162,9 +164,9 @@ namespace SportsSystem
             this.groupBox1.Controls.Add(this.nameRadio);
             this.groupBox1.Controls.Add(this.phoneRadio);
             this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.groupBox1.Location = new System.Drawing.Point(112, 110);
+            this.groupBox1.Location = new System.Drawing.Point(28, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 146);
+            this.groupBox1.Size = new System.Drawing.Size(456, 69);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "検索条件";
@@ -174,9 +176,9 @@ namespace SportsSystem
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.groupBox2.Location = new System.Drawing.Point(460, 110);
+            this.groupBox2.Location = new System.Drawing.Point(510, 44);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(194, 145);
+            this.groupBox2.Size = new System.Drawing.Size(194, 114);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "検索方式";
@@ -185,13 +187,14 @@ namespace SportsSystem
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.radioButton2.Location = new System.Drawing.Point(24, 95);
+            this.radioButton2.Location = new System.Drawing.Point(24, 73);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(141, 31);
             this.radioButton2.TabIndex = 14;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "部分一致";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -205,12 +208,24 @@ namespace SportsSystem
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "完全一致";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(89, 216);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(615, 315);
+            this.dataGridView1.TabIndex = 17;
             // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -218,7 +233,7 @@ namespace SportsSystem
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Search";
@@ -228,6 +243,7 @@ namespace SportsSystem
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +257,7 @@ namespace SportsSystem
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.RadioButton idRadio;
         private System.Windows.Forms.RadioButton phoneRadio;
         private System.Windows.Forms.RadioButton nameRadio;
@@ -249,5 +265,6 @@ namespace SportsSystem
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

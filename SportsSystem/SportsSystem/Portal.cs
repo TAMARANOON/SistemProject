@@ -40,7 +40,7 @@ namespace SportsSystem
                 using (SQLiteCommand cmd = con.CreateCommand())
                 {
                     //登録画面表示時にm_clientを作成
-                    cmd.CommandText = "create table if not exists m_client(client_id INTEGER PRIMARY KEY AUTOINCREMENT, client_name TEXT, address TEXT, phone_number TEXT)";
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS m_client(client_id INTEGER PRIMARY KEY AUTOINCREMENT, client_name TEXT, address TEXT, phone_number TEXT)";
                     cmd.ExecuteNonQuery();
                 }
                 con.Close();
