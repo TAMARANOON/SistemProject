@@ -8,8 +8,9 @@ namespace SportsSystem
     //会員を会員番号、氏名、電話番号で検索
     public partial class Search : Form
     {
-        string SearchFormat;
-        string SearchType;
+        string SearchFormat = "client_id";
+        string SearchType = "=";
+        string Persent = "";
         public Search()
         {
             InitializeComponent();
@@ -42,12 +43,14 @@ namespace SportsSystem
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            SearchType = "";
+            SearchType = "=";
+            Persent =  "";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            SearchType = "";
+            SearchType = "LIKE";
+            Persent = "%";
         }
 
         // 戻る
@@ -68,8 +71,7 @@ namespace SportsSystem
             {
                 con.Open();
                 var dataTable = new DataTable();
-
-                var adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + "= " + SearchType + "'"+ SearchWord.ToString() +"'", con);
+                var adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + SearchType + Persent + "'" + SearchWord.ToString() + "'" + Persent, con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
                 con.Close();
