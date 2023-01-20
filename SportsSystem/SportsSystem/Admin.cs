@@ -44,7 +44,6 @@ namespace SportsSystem
                 var adapter = new SQLiteDataAdapter("SELECT * FROM m_client", con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
-
             }
         }
     }

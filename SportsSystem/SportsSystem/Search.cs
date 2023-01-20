@@ -8,13 +8,14 @@ namespace SportsSystem
     //会員を会員番号、氏名、電話番号で検索
     public partial class Search : Form
     {
+        //検索する要素　初期値会員番号
         string SearchFormat = "client_id";
-        string SearchType = "=";
-        string Persent = "";
+
         public Search()
         {
             InitializeComponent();
         }
+        //会員番号押下時
         private void idRadio_CheckedChanged(object sender, EventArgs e)
         {
             if (idRadio.Checked)
@@ -23,7 +24,7 @@ namespace SportsSystem
                 SearchFormat = "client_id";
             }
         }
-
+        //氏名押下時
         private void nameRadio_CheckedChanged(object sender, EventArgs e)
         {
             if (nameRadio.Checked)
@@ -32,7 +33,7 @@ namespace SportsSystem
                 SearchFormat = "client_name";
             }
         }
-
+        //電話番号押下時
         private void phoneRadio_CheckedChanged(object sender, EventArgs e)
         {
             if (phoneRadio.Checked)
@@ -41,18 +42,6 @@ namespace SportsSystem
                 SearchFormat = "phone_number";
             }
         }
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            SearchType = "=";
-            Persent =  "";
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            SearchType = "LIKE";
-            Persent = "%";
-        }
-
         // 戻る
         private void button1_Click(object sender, EventArgs e) 
         {
@@ -71,11 +60,19 @@ namespace SportsSystem
             {
                 con.Open();
                 var dataTable = new DataTable();
-                var adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + SearchType + Persent + "'" + SearchWord.ToString() + "'" + Persent, con);
+                var adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + "='"+ SearchWord +"'", con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
                 con.Close();
+                //該当データの件数
+                int cnt = dataGridView1.Rows.Count;
+                SubjectCount.Text = "該当件数  "+ cnt.ToString() + "件";
             }
+        }
+        //管理
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
