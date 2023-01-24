@@ -20,7 +20,7 @@ namespace SportsSystem
             registerCheck.nameLabel.Text = nameBox.Text;
             registerCheck.phoneLabel.Text = phoneBox.Text;
             registerCheck.addressLabel.Text = addressBox.Text;
-
+            //ヨークシャーテリア
             registerCheck.ShowDialog();
         }
 

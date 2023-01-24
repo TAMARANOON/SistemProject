@@ -59,8 +59,8 @@ namespace SportsSystem
             using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
             {
                 con.Open();
-                var dataTable = new DataTable();
-                var adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + "='"+ SearchWord +"'", con);
+                DataTable dataTable = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + "='" + SearchWord + "'", con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
                 con.Close();

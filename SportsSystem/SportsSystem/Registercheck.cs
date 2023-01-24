@@ -9,7 +9,7 @@ namespace SportsSystem
     public partial class RegisterCheck : Form
     {
         Register register;
-        int CurrentId;
+        //int CurrentId;
         public RegisterCheck(Register register)
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace SportsSystem
         private void registerButtonClick(object sender, EventArgs e){ 
             using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db")){
                 connection.Open();
-                using (SQLiteTransaction trans = connection.BeginTransaction()){
+                using (SQLiteTransaction transaction = connection.BeginTransaction()){
                     SQLiteCommand cmd = connection.CreateCommand();
                     //インサート
                     cmd.CommandText = "INSERT INTO m_client (client_name, address, phone_number) VALUES (@Name, @Address, @Phone)";
@@ -34,7 +34,7 @@ namespace SportsSystem
                     cmd.Parameters["Phone"].Value = phoneLabel.Text;
                     cmd.ExecuteNonQuery();
                     //コミット
-                    trans.Commit();
+                    transaction.Commit();
                     cmd.CommandText = "SELECT @@IDENTITY";
                     connection.Close();
                 }

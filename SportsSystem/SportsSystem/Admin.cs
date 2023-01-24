@@ -39,9 +39,9 @@ namespace SportsSystem
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
             {
-                var dataTable = new DataTable();
+                DataTable dataTable = new DataTable();
 
-                var adapter = new SQLiteDataAdapter("SELECT * FROM m_client", con);
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM m_client", con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }

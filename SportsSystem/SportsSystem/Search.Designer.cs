@@ -66,7 +66,7 @@ namespace SportsSystem
             this.SearchBox.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.SearchBox.Location = new System.Drawing.Point(165, 122);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(477, 31);
+            this.SearchBox.Size = new System.Drawing.Size(478, 31);
             this.SearchBox.TabIndex = 1;
             // 
             // searchLabel
