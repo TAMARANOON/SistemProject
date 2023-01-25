@@ -10,6 +10,7 @@ namespace SportsSystem
     {
         //検索する要素　初期値会員番号
         string SearchFormat = "client_id";
+        string Number;
 
         public Search()
         {
@@ -43,37 +44,63 @@ namespace SportsSystem
             }
         }
         // 戻る
-        private void button1_Click(object sender, EventArgs e) 
+        private void button1_Click(object sender, EventArgs e)
         {
             Portal portal = new Portal();
             portal.Show();
             this.Close();
         }
-        
+
         // 検索
         private void button2_Click(object sender, EventArgs e)
         {
             string SearchWord;
             SearchWord = SearchBox.Text;
 
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db"))
             {
-                con.Open();
+                connection.Open();
                 DataTable dataTable = new DataTable();
-                SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM m_client WHERE " + SearchFormat + "='" + SearchWord + "'", con);
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter
+                    ("SELECT * FROM m_client WHERE " + SearchFormat + "='" + SearchWord + "'", connection);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
-                con.Close();
+                connection.Close();
                 //該当データの件数
                 int cnt = dataGridView1.Rows.Count;
-                SubjectCount.Text = "該当件数  "+ cnt.ToString() + "件";
+                SubjectCount.Text = "該当件数  " + cnt.ToString() + "件";
             }
         }
         //管理
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Number = manageNumber.Text;
+            //会員番号が入力されていない場合
+            if (manageNumber.Text.Length == 0)
+            {
+                MessageBox.Show
+                    ("変更する会員の番号が入力されていません。",
+                    "エラー",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db"))
+                //{
+                //    connection.Open();
+                //    using (SQLiteTransaction transaction = connection.BeginTransaction())
+                //    {
+                //        SQLiteCommand command = connection.CreateCommand();
+                //        command.CommandText = "SELECT " + Number + " FROM m_client WHERE client_id";
+                //        command.ExecuteNonQuery();
+                //    }
+                //    connection.Close();
+                //}
+                DataManagement dataManagement = new DataManagement();
+                dataManagement.ShowDialog();
+            }
         }
-
+    
     }
+    
 }

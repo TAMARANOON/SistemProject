@@ -33,6 +33,7 @@ namespace SportsSystem
                 }
                 con.Close();
             }
+            Application.Exit();
         }
         //データ表示
         private void button3_Click(object sender, EventArgs e)

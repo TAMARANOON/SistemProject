@@ -10,6 +10,18 @@ namespace SportsSystem
         public Portal()
         {
             InitializeComponent();
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
+            {
+                con.Open();
+                using (SQLiteCommand cmd = con.CreateCommand())
+                {
+                    //m_clientを作成
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS m_client(client_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        " client_name TEXT, address TEXT, phone_number TEXT)";
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
         }
 
         // 会員管理
@@ -34,17 +46,6 @@ namespace SportsSystem
             register.Show();
             this.Hide();
 
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
-            {
-                con.Open();
-                using (SQLiteCommand cmd = con.CreateCommand())
-                {
-                    //登録画面表示時にm_clientを作成
-                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS m_client(client_id INTEGER PRIMARY KEY AUTOINCREMENT, client_name TEXT, address TEXT, phone_number TEXT)";
-                    cmd.ExecuteNonQuery();
-                }
-                con.Close();
-            }
         }
         //管理者用メニュー（消去予定）
         private void button4_Click(object sender, EventArgs e)

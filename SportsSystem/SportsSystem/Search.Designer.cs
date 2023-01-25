@@ -44,6 +44,8 @@ namespace SportsSystem
             this.button3 = new System.Windows.Forms.Button();
             this.SubjectCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.manageNumber = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -206,17 +208,40 @@ namespace SportsSystem
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(511, 558);
+            this.label1.Location = new System.Drawing.Point(216, 534);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 15);
+            this.label1.Size = new System.Drawing.Size(158, 15);
             this.label1.TabIndex = 21;
-            this.label1.Text = "変更、削除はこちらから";
+            this.label1.Text = "変更、削除はこちらから→";
+            // 
+            // manageNumber
+            // 
+            this.manageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.manageNumber.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manageNumber.Location = new System.Drawing.Point(505, 548);
+            this.manageNumber.Name = "manageNumber";
+            this.manageNumber.Size = new System.Drawing.Size(152, 31);
+            this.manageNumber.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(214, 549);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(265, 30);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "変更する会員の番号";
             // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.manageNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SubjectCount);
             this.Controls.Add(this.button3);
@@ -258,5 +283,7 @@ namespace SportsSystem
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label SubjectCount;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox manageNumber;
+        private System.Windows.Forms.Label label3;
     }
 }

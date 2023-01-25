@@ -9,7 +9,7 @@ namespace SportsSystem
     public partial class RegisterCheck : Form
     {
         Register register;
-        //int CurrentId;
+        int CurrentId;
         public RegisterCheck(Register register)
         {
             InitializeComponent();
@@ -21,21 +21,23 @@ namespace SportsSystem
             using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db")){
                 connection.Open();
                 using (SQLiteTransaction transaction = connection.BeginTransaction()){
-                    SQLiteCommand cmd = connection.CreateCommand();
+                    SQLiteCommand command = connection.CreateCommand();
                     //インサート
-                    cmd.CommandText = "INSERT INTO m_client (client_name, address, phone_number) VALUES (@Name, @Address, @Phone)";
+                    command.CommandText = 
+                        "INSERT INTO m_client (client_name, address, phone_number) " +
+                        "VALUES (@Name, @Address, @Phone)";
                     //パラメータセット
-                    cmd.Parameters.Add("Name", DbType.String);
-                    cmd.Parameters.Add("Address", DbType.String);
-                    cmd.Parameters.Add("Phone", DbType.String);
+                    command.Parameters.Add("Name", DbType.String);
+                    command.Parameters.Add("Address", DbType.String);
+                    command.Parameters.Add("Phone", DbType.String);
                     //データ追加
-                    cmd.Parameters["Name"].Value = nameLabel.Text;
-                    cmd.Parameters["Address"].Value = addressLabel.Text;
-                    cmd.Parameters["Phone"].Value = phoneLabel.Text;
-                    cmd.ExecuteNonQuery();
+                    command.Parameters["Name"].Value = nameLabel.Text;
+                    command.Parameters["Address"].Value = addressLabel.Text;
+                    command.Parameters["Phone"].Value = phoneLabel.Text;
+                    command.ExecuteNonQuery();
                     //コミット
                     transaction.Commit();
-                    cmd.CommandText = "SELECT @@IDENTITY";
+                    command.CommandText = "SELECT @@IDENTITY";
                     connection.Close();
                 }
             }
