@@ -37,12 +37,19 @@ namespace SportsSystem
                     command.ExecuteNonQuery();
                     //コミット
                     transaction.Commit();
-                    command.CommandText = "SELECT @@IDENTITY";
+                    command.CommandText = "SELECT last_insert_rowid()";
+                    SQLiteDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        CurrentId = reader.GetInt32(0);
+                    }
+                    reader.Close();
                     connection.Close();
                 }
             }
             //登録完了画面に遷移
             RegisterComplete registerComplete = new RegisterComplete();
+            registerComplete.Numberlabel.Text = CurrentId.ToString();
             register.Close();
             registerComplete.Show();
             this.Close();

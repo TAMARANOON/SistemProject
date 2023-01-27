@@ -220,6 +220,7 @@ namespace SportsSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.manageNumber.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manageNumber.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.manageNumber.Location = new System.Drawing.Point(505, 548);
             this.manageNumber.Name = "manageNumber";
             this.manageNumber.Size = new System.Drawing.Size(152, 31);

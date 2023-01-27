@@ -16,6 +16,7 @@ namespace SportsSystem
         {
             InitializeComponent();
         }
+        #region ラジオボタン関係
         //会員番号押下時
         private void idRadio_CheckedChanged(object sender, EventArgs e)
         {
@@ -43,6 +44,7 @@ namespace SportsSystem
                 SearchFormat = "phone_number";
             }
         }
+        #endregion
         // 戻る
         private void button1_Click(object sender, EventArgs e)
         {
@@ -75,7 +77,7 @@ namespace SportsSystem
         private void button3_Click(object sender, EventArgs e)
         {
             Number = manageNumber.Text;
-            //会員番号が入力されていない場合
+            //テキストボックスに何も入力されていない場合
             if (manageNumber.Text.Length == 0)
             {
                 MessageBox.Show
@@ -85,19 +87,26 @@ namespace SportsSystem
             }
             else
             {
-                //using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db"))
-                //{
-                //    connection.Open();
-                //    using (SQLiteTransaction transaction = connection.BeginTransaction())
-                //    {
-                //        SQLiteCommand command = connection.CreateCommand();
-                //        command.CommandText = "SELECT " + Number + " FROM m_client WHERE client_id";
-                //        command.ExecuteNonQuery();
-                //    }
-                //    connection.Close();
-                //}
-                DataManagement dataManagement = new DataManagement();
-                dataManagement.ShowDialog();
+                
+                    DataManagement dataManagement = new DataManagement();
+
+                //入力した会員番号を次の画面に
+                dataManagement.numberLabel.Text = Number;
+
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db"))
+                {
+                    connection.Open();
+                    using (SQLiteTransaction transaction = connection.BeginTransaction())
+                    {
+                        SQLiteCommand command = connection.CreateCommand();
+                        command.CommandText = "SELECT client_name , phone_number, address FROM m_client WHERE client_id = " + Number + " ";
+                        command.ExecuteNonQuery();
+                    }
+                    connection.Close();
+                }
+
+                dataManagement.Show();
+                this.Close();
             }
         }
     

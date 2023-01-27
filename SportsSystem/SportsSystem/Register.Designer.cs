@@ -98,6 +98,7 @@ namespace SportsSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.phoneBox.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.phoneBox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.phoneBox.Location = new System.Drawing.Point(162, 208);
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(274, 31);
