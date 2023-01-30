@@ -22,27 +22,27 @@ namespace SportsSystem
         //テーブル削除
         private void button2_Click(object sender, EventArgs e)
         {
-            using (var con = new SQLiteConnection("Data Source=client.db"))
+            using (var connection = new SQLiteConnection("Data Source=client.db"))
             {
-                con.Open();
-                using(SQLiteCommand cmd = con.CreateCommand())
+                connection.Open();
+                using(SQLiteCommand command = connection.CreateCommand())
                 {
-                    cmd.CommandText =
+                    command.CommandText =
                         "drop table m_client";
-                    cmd.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
                 }
-                con.Close();
+                connection.Close();
             }
             Application.Exit();
         }
         //データ表示
         private void button3_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=client.db"))
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db"))
             {
                 DataTable dataTable = new DataTable();
 
-                SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM m_client", con);
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM m_client", connection);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }

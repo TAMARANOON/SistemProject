@@ -91,9 +91,9 @@ namespace SportsSystem
                     
                 //入力した会員番号を次の画面に
                 dataManagement.numberLabel.Text = Number;
-                string Name = "";
-                string Phone = "";
-                string Address = "";
+                string Name = "該当データ無し";
+                string Phone = "該当データ無し";
+                string Address = "該当データ無し";
 
                 using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db"))
                 {
