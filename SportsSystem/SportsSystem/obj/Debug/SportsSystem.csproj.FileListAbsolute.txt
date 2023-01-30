@@ -50,3 +50,5 @@ C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Registercheck.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Registercomplete.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.DataManagement.resources
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.DataUpdate.resources
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.DataDelete.resources

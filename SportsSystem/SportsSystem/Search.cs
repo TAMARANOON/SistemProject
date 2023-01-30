@@ -76,6 +76,7 @@ namespace SportsSystem
         //管理
         private void button3_Click(object sender, EventArgs e)
         {
+            DataManagement dataManagement = new DataManagement();
             Number = manageNumber.Text;
             //テキストボックスに何も入力されていない場合
             if (manageNumber.Text.Length == 0)
@@ -87,11 +88,12 @@ namespace SportsSystem
             }
             else
             {
-                
-                    DataManagement dataManagement = new DataManagement();
-
+                    
                 //入力した会員番号を次の画面に
                 dataManagement.numberLabel.Text = Number;
+                string Name = "";
+                string Phone = "";
+                string Address = "";
 
                 using (SQLiteConnection connection = new SQLiteConnection("Data Source=client.db"))
                 {
@@ -100,11 +102,22 @@ namespace SportsSystem
                     {
                         SQLiteCommand command = connection.CreateCommand();
                         command.CommandText = "SELECT client_name , phone_number, address FROM m_client WHERE client_id = " + Number + " ";
+                        using(SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read() == true)
+                            {
+                                Name = reader["client_name"] as string;
+                                Phone = reader["phone_number"] as string;
+                                Address = reader["address"] as string;
+                            }
+                        }
                         command.ExecuteNonQuery();
                     }
                     connection.Close();
                 }
-
+                dataManagement.nameLabel.Text = Name;
+                dataManagement.phoneLabel.Text = Phone;
+                dataManagement.addressLabel.Text = Address;
                 dataManagement.Show();
                 this.Close();
             }
