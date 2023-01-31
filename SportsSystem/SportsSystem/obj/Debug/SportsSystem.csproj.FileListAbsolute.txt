@@ -1,7 +1,6 @@
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\SportsSystem.exe.config
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\SportsSystem.exe
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\bin\Debug\SportsSystem.pdb
-C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.AssemblyReference.cache
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.Properties.Resources.resources
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.GenerateResource.cache
 C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.CoreCompileInputs.cache
@@ -81,3 +80,4 @@ C:\Users\tyuki\Desktop\SportSystem\SportsSystem\SportsSystem\obj\Debug\SportsSys
 C:\Users\tyuki\Desktop\SportSystem\SportsSystem\SportsSystem\obj\Debug\SportsSystem.csproj.CopyComplete
 C:\Users\tyuki\Desktop\SportSystem\SportsSystem\SportsSystem\obj\Debug\SportsSystem.exe
 C:\Users\tyuki\Desktop\SportSystem\SportsSystem\SportsSystem\obj\Debug\SportsSystem.pdb
+C:\Users\s20217005\Desktop\システムG2A219\Git\SportsSystem\SportsSystem\obj\Debug\SportsSystem.UpdateComplete.resources

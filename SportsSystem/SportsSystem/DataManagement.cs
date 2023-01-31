@@ -43,7 +43,8 @@ namespace SportsSystem
             dataUpdate.nameBox.Text = nameLabel.Text;
             dataUpdate.phoneBox.Text = phoneLabel.Text;
             dataUpdate.addressBox.Text = addressLabel.Text;
-            dataUpdate.Show();
+            dataUpdate.ShowDialog();
+            this.Close();
         }
     }
 }
